@@ -1,6 +1,6 @@
 # projf_scheddar
 
-A new Flutter project.
+Projeto feito em Flutter para o curso Q.I
 
 ## Getting Started
 

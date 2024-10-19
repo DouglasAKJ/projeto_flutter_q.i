@@ -45,7 +45,7 @@ class Loja extends StatelessWidget {
                 ),
                 const Padding(padding: EdgeInsets.only(left: 10)),
                 Image.asset(
-                  '../assets/imgplaca.png',
+                  'assets/imgplaca.png',
                   fit: BoxFit.cover,
                   width: 150,
                   height: 150,
@@ -63,7 +63,7 @@ class Loja extends StatelessWidget {
                     width: 100,
                     height: 100,
                     child: Image.asset(
-                      '../assets/imgcompressor.png',
+                      'assets/imgcompressor.png',
                       fit: BoxFit.cover,
                       width: 150,
                       height: 150,
@@ -80,7 +80,7 @@ class Loja extends StatelessWidget {
                     width: 100,
                     height: 100,
                     child: Image.asset(
-                      '../assets/imgsecadora.png',
+                      'assets/imgsecadora.png',
                       fit: BoxFit.cover,
                       width: 150,
                       height: 150,
@@ -101,7 +101,7 @@ class Loja extends StatelessWidget {
                     width: 100,
                     height: 100,
                     child: Image.asset(
-                      '../assets/imgmaquina.png',
+                      'assets/imgmaquina.png',
                       fit: BoxFit.cover,
                       width: 50,
                       height: 50,
@@ -118,7 +118,7 @@ class Loja extends StatelessWidget {
                     width: 100,
                     height: 100,
                     child: Image.asset(
-                      '../assets/imgsensor.png',
+                      'assets/imgsensor.png',
                       fit: BoxFit.cover,
                       width: 150,
                       height: 150,

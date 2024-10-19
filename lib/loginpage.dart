@@ -18,35 +18,93 @@ class LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 13, 31, 47),
       body: Center(
         child: SizedBox(
-          height: 450,
+          height: 750,
           width: 250,
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
+              const SizedBox(
+                height: 20,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                      color: const Color.fromARGB(255, 13, 31, 47),
+                      width: 70,
+                      height: 70,
+                      child: Image.asset(
+                        'assets/imglogo.png',
+                        fit: BoxFit.cover,
+                        width: 70,
+                        height: 70,
+                      )),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  const Text(
+                    "ViaCorp\nSoluções",
+                    style: TextStyle(color: Colors.white, fontSize: 20),
+                  ),
+                ],
+              ),
               TextField(
                 controller: controlEmail,
                 decoration: const InputDecoration(
+                  fillColor: Color.fromRGBO(74, 66, 82, 1),
+                  filled: true,
+                  labelStyle: TextStyle(color: Colors.white),
                   labelText: "Email",
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(50))),
                 ),
               ),
               TextField(
                 controller: controlName,
                 decoration: const InputDecoration(
+                  fillColor: Color.fromRGBO(74, 66, 82, 1),
+                  filled: true,
+                  labelStyle: TextStyle(color: Colors.white),
                   labelText: "Nome",
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(50))),
                 ),
               ),
               TextField(
                 controller: controlSenha,
-                decoration: const InputDecoration(labelText: "Senha"),
+                decoration: const InputDecoration(
+                  fillColor: Color.fromRGBO(74, 66, 82, 1),
+                  filled: true,
+                  labelStyle: TextStyle(color: Colors.white),
+                  labelText: "Senha",
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(50))),
+                ),
               ),
               TextField(
                 controller: controlCPF,
-                decoration: const InputDecoration(labelText: "CPF"),
+                decoration: const InputDecoration(
+                  fillColor: Color.fromRGBO(74, 66, 82, 1),
+                  filled: true,
+                  labelStyle: TextStyle(color: Colors.white),
+                  labelText: "CPF",
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(50))),
+                ),
               ),
               TextField(
                 controller: controlEndereco,
-                decoration: const InputDecoration(labelText: "Endereço"),
+                decoration: const InputDecoration(
+                  fillColor: Color.fromRGBO(74, 66, 82, 1),
+                  filled: true,
+                  labelStyle: TextStyle(color: Colors.white),
+                  labelText: "Endereço",
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(50))),
+                ),
               ),
               const SizedBox(
                 height: 20,
@@ -77,7 +135,10 @@ class LoginPageState extends State<LoginPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Text("Já possui conta?"),
+                  const Text(
+                    "Já possui conta?",
+                    style: TextStyle(color: Colors.white),
+                  ),
                   const SizedBox(
                     width: 10,
                   ),

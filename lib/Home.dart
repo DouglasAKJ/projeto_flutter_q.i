@@ -20,11 +20,11 @@ class HomeState extends State<Home> {
   Widget build(BuildContext context) {
     final agendamentoProvider = Provider.of<Agendamentoprovider>(context);
     List<String> produtos = [
-      '../assets/imgsecadora.png',
-      '../assets/imgmaquina.png',
-      '../assets/imgsensor.png',
-      '../assets/imgplaca.png',
-      '../assets/imgcompressor.png'
+      'assets/imgsecadora.png',
+      'assets/imgmaquina.png',
+      'assets/imgsensor.png',
+      'assets/imgplaca.png',
+      'assets/imgcompressor.png'
     ];
     return Center(
         child: Column(children: [
@@ -42,7 +42,6 @@ class HomeState extends State<Home> {
           const Padding(padding: EdgeInsets.fromLTRB(20, 0, 0, 0)),
           TextButton(
               onPressed: () {
-                InicioPageState.selectedIndex = 2;
                 setState(() {});
               },
               child: const Text(

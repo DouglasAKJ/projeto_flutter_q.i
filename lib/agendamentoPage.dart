@@ -15,12 +15,10 @@ class AgendamentosState extends State<Agendamentos> {
   TextEditingController controlNomeProduto = TextEditingController();
   TextEditingController controlTurno = TextEditingController();
   TextEditingController controlDefeito = TextEditingController();
-  //DateTime? dataPicker;
   String? dataTexto;
   DateTime hoje = DateTime.now();
   String data = '';
   int contador = 0;
-  //List<AgendamentoColumn> agendamentos = [];
 
   @override
   Widget build(BuildContext context) {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:projf_scheddar/DTO/usuario.dart';
+import 'package:provider/provider.dart';
 import 'agendamentoPage.dart';
 import 'home.dart';
 import 'lojapage.dart';
@@ -14,9 +15,8 @@ class InicioPage extends StatefulWidget {
 }
 
 class InicioPageState extends State<InicioPage> {
-  static int selectedIndex = 0;
-
   late final List<Widget> _pages;
+  int indexAtual = 0;
 
   @override
   void initState() {
@@ -24,7 +24,7 @@ class InicioPageState extends State<InicioPage> {
     _pages = [
       Home(user: widget.user),
       const Agendamentos(),
-      Loja(),
+      const Loja(),
     ];
   }
 
@@ -44,10 +44,10 @@ class InicioPageState extends State<InicioPage> {
       ),
       bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
-          currentIndex: selectedIndex,
+          currentIndex: indexAtual,
           onTap: (index) {
             setState(() {
-              selectedIndex = index;
+              indexAtual = index;
             });
           },
           items: const [
@@ -56,7 +56,7 @@ class InicioPageState extends State<InicioPage> {
                 icon: Icon(Icons.schedule), label: "Agendamentos"),
             BottomNavigationBarItem(icon: Icon(Icons.shop), label: "Loja"),
           ]),
-      body: _pages[selectedIndex],
+      body: _pages[indexAtual],
     );
   }
 }

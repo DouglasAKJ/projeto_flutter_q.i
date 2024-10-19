@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import 'Agendamentos.dart';
-import 'Home.dart';
-import 'Loja.dart';
-import 'Servicos.dart';
+import 'package:projf_scheddar/DTO/usuario.dart';
+import 'agendamentoPage.dart';
+import 'home.dart';
+import 'lojapage.dart';
+import 'loginpage.dart';
 
 class InicioPage extends StatefulWidget {
-  const InicioPage({super.key});
+  final Usuario user;
+  const InicioPage({super.key, required this.user});
 
   @override
   State<InicioPage> createState() => InicioPageState();
@@ -14,12 +16,17 @@ class InicioPage extends StatefulWidget {
 class InicioPageState extends State<InicioPage> {
   static int selectedIndex = 0;
 
-  final List<Widget> _pages = [
-    Home(),
-    Servicos(),
-    Agendamentos(),
-    Loja(),
-  ];
+  late final List<Widget> _pages;
+
+  @override
+  void initState() {
+    super.initState();
+    _pages = [
+      Home(user: widget.user),
+      const Agendamentos(),
+      Loja(),
+    ];
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +39,7 @@ class InicioPageState extends State<InicioPage> {
           onPressed: () {},
           icon: const Icon(Icons.person_2_rounded),
           style: const ButtonStyle(
-              backgroundColor: const WidgetStatePropertyAll(Colors.white)),
+              backgroundColor: WidgetStatePropertyAll(Colors.white)),
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -45,7 +52,6 @@ class InicioPageState extends State<InicioPage> {
           },
           items: const [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: "Ínicio"),
-            BottomNavigationBarItem(icon: Icon(Icons.book), label: "Serviços"),
             BottomNavigationBarItem(
                 icon: Icon(Icons.schedule), label: "Agendamentos"),
             BottomNavigationBarItem(icon: Icon(Icons.shop), label: "Loja"),

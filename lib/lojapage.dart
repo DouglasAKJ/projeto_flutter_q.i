@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Loja extends StatelessWidget {
+  const Loja({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -9,7 +11,7 @@ class Loja extends StatelessWidget {
           const Padding(padding: EdgeInsets.only(bottom: 30)),
           Row(
             children: [
-              Padding(padding: EdgeInsets.only(left: 30)),
+              const Padding(padding: EdgeInsets.only(left: 30)),
               const SizedBox(
                 width: 280,
                 child: TextField(
@@ -33,7 +35,14 @@ class Loja extends StatelessWidget {
             child: Row(
               children: [
                 const Padding(padding: EdgeInsets.only(left: 30)),
-                const Text("PLACEHOLDER"),
+                const Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("PROMOÇOES"),
+                    Text("ESPECIAIS"),
+                    Text("ATÉ 50%"),
+                  ],
+                ),
                 const Padding(padding: EdgeInsets.only(left: 10)),
                 Image.asset(
                   '../assets/imgplaca.png',
